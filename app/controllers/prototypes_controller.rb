@@ -44,7 +44,7 @@ class PrototypesController < ApplicationController
   def destroy
     prototype = Prototype.find(params[:id])
     prototype.destroy
-    # redirect_to root_path unless nless user_signed_in?
+    redirect_to action: :index 
   end
 
   private
